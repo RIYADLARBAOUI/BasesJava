@@ -45,7 +45,7 @@ public class Livre {
         this.qty = qty;
     }
 
-    public String toString(){
+    public String toString(){   // pas tres beau
         String test = "Livre[name="+this.name+",authors = {Authors";
         for(int i = 0 ; i < authors.length;++i){
             test+= "[name="+this.getAuthors()[i].getName()+",email="+this.getAuthors()[i].getEmail()+",gender="+this.getAuthors()[i].getGender()+"]}";
@@ -53,7 +53,7 @@ public class Livre {
         return  test+=",price="+this.price+",qty="+this.qty+"]";
     }
 
-    public String getAuthorNames(){
+    public String getAuthorNames(){ // pas tres beau
         String stk="";
         for(Author element : authors ){
             stk += element.getName()+",";
